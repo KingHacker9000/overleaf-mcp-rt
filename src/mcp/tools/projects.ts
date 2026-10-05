@@ -11,9 +11,9 @@ export async function handleListProjects(
 
 export async function handleCreateProject(
   ctx: ServerContext,
-  input: { name: string; template?: 'none' | 'example' },
-): Promise<{ projectId: string; name: string; template: 'none' | 'example' }> {
-  const template = input.template ?? 'none'
+  input: { name: string; template?: 'blank' | 'example' },
+): Promise<{ projectId: string; name: string; template: 'blank' | 'example' }> {
+  const template = input.template ?? 'blank'
   const created = await ctx.rest.createProject(input.name, template)
   return { projectId: created.id, name: input.name, template }
 }
