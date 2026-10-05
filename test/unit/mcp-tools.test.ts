@@ -119,7 +119,7 @@ describe('project lifecycle tools', () => {
     await expect(handleCreateProject(ctx, { name: 'Paper' })).resolves.toEqual({
       projectId: 'p-new',
       name: 'Paper',
-      template: 'none',
+      template: 'blank',
     })
     await expect(handleCloneProject(ctx, { projectId: 'p1', name: 'Copy' })).resolves.toEqual({
       projectId: 'p-copy',
