@@ -73,7 +73,7 @@ describe('OverleafRest project lifecycle', () => {
     await expect(makeRest().createProject('Blank Paper')).resolves.toEqual({ id: 'new-blank' })
     await expect(makeRest().createProject('Example Paper', 'example')).resolves.toEqual({ id: 'new-example' })
     expect(seen).toEqual([
-      { projectName: 'Blank Paper', template: 'none' },
+      { projectName: 'Blank Paper', template: 'blank' },
       { projectName: 'Example Paper', template: 'example' },
     ])
   })
