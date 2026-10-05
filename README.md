@@ -211,7 +211,7 @@ A `✗` on any step prints the underlying error code (`OVERLEAF_AUTH_FAILED`, `P
 
 | Tool | Purpose |
 |---|---|
-| `overleaf_create_project(name, template?)` | Create a blank project (`template="none"`, default) or Overleaf's example project (`template="example"`). Returns the new project id. |
+| `overleaf_create_project(name, template?)` | Create a blank project (`template="blank"`, default) or Overleaf's example project (`template="example"`). Returns the new project id. |
 | `overleaf_clone_project(projectId, name)` | Duplicate a project under a new name. Returns the new project id. |
 | `overleaf_rename_project(projectId, newName)` | Rename a project. |
 | `overleaf_archive_project(projectId)` | Archive a project; reversible with `overleaf_unarchive_project`. |
