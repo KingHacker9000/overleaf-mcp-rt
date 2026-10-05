@@ -53,7 +53,7 @@ const TOOL_DEFINITIONS = [
       type: 'object',
       properties: {
         name: { type: 'string', minLength: 1 },
-        template: { type: 'string', enum: ['none', 'example'] },
+        template: { type: 'string', enum: ['blank', 'example'] },
       },
       required: ['name'],
     },
@@ -475,7 +475,7 @@ export function registerAllTools(server: Server, source: ContextSource) {
         return wrap(
           await handleCreateProject(
             ctx,
-            args as { name: string; template?: 'none' | 'example' },
+            args as { name: string; template?: 'blank' | 'example' },
           ),
         )
       case 'overleaf_clone_project':
