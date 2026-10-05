@@ -66,7 +66,7 @@ export class OverleafRest {
 
   async createProject(
     name: string,
-    template: 'none' | 'example' = 'none',
+    template: 'blank' | 'example' = 'blank',
   ): Promise<{ id: string }> {
     const res = await this.http.postJson('/project/new', { projectName: name, template })
     if (!res.ok) {
